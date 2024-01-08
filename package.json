@@ -1,0 +1,65 @@
+{
+  "name": "v-api",
+  "version": "0.0.1",
+  "description": "use api by hook type for vue3",
+  "author": "HuziG <1067408814@qq.com>",
+  "scripts": {
+    "dev": "vite --force --host",
+    "build": "npx vite build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "main": "dist/v-api.umd.js",
+  "module": "dist/v-api.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/v-api.umd.js",
+      "import": "./dist/v-api.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "*.mjs"
+  ],
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "search-insights"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.4",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.5.3",
+    "vitepress": "1.0.0-rc.20",
+    "vue": "^3.3.4",
+    "vue-tsc": "^1.6.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "bugs": {
+    "url": "https://github.com/HuziG/v-api/issues"
+  },
+  "homepage": "https://v-api.vercel.app/",
+  "keywords": [
+    "vue",
+    "vue3",
+    "vite"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HuziG/v-api.git",
+    "directory": "packages/v-api"
+  }
+}
